@@ -62,6 +62,7 @@ const Detail = () => {
         params: {
           api_key: apiKey,
           append_to_response: 'videos',
+          // eslint-disable-next-line no-dupe-keys
           append_to_response: 'credits',
         },
       });
