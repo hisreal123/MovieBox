@@ -29,6 +29,7 @@ const Detail = () => {
   const baseUrl = 'https://api.themoviedb.org/3';
 
 
+
   const icons = {
     Home: <img src={home} alt="Home" className="h-[25px] w-[25px] text-[#000000]/20" />,
     Movie: <img src={Movie} alt="Movies" className="h-[25px] w-[25px] text-[#000000]/20" />,
@@ -55,7 +56,7 @@ const Detail = () => {
 
   const fetchMovieDetails = async () => {
     try {
-      const response = await axios.get(`${baseUrl}/movie/${id}`, {
+      const response = await axios.get(`${baseUrl}/discover/movie/${id}`, {
         params: {
           api_key: apiKey,
           append_to_response: 'videos'

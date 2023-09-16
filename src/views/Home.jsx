@@ -19,6 +19,7 @@ const Home = () => {
 
     const baseUrl = 'https://api.themoviedb.org/3';
 
+
     const fetchMovies = async () => {
         try {
             const response = await axios.get(`${baseUrl}/discover/movie/`, {
