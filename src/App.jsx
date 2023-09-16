@@ -6,22 +6,7 @@ import Detail from "./views/Detail";
 import Home from "./views/Home";
 
 
-// import { Provider } from 'react-redux'
-
-// import store from "./redux/store";
-// import Nav from "./components/Misc/Nav";
-
-
 const queryClient = new QueryClient();
-
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Routes>
-//       <Route path="/" element={<User />} />
-//       <Route path="/details" element={<Details />} />
-//     </Routes>
-//   )
-// )
 
 
 export default function App() {
