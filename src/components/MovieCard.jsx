@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const MovieCard = ({ movie }) => {
 
     // const [addToFav, setAddToFav] = useState(false)
-    const img_url = "http://image.tmdb.org/t/p/w500";
+    const img_url = "https://image.tmdb.org/t/p/w500";
 
     return (
         <>
