@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import MovieCard from '../components/MovieCard';
 import { FiChevronRight } from 'react-icons/fi';
-import imdb from '../assets/imdb.svg';
-import tomatoes from '../assets/tomates.svg';
-import playT from '../assets/sideBar/homePlayTrailer.svg';
+import imdb from '../assets/imdb.png';
+import tomatoes from '../assets/tomato.png';
+import playT from '../assets/playTrailer.png';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
 
@@ -22,7 +22,7 @@ const Home = () => {
 
     const fetchMovies = async () => {
         try {
-            const response = await axios.get(`${baseUrl}/discover/movie/`, {
+            const response = await axios.get(`${baseUrl}/movie/top_rated`, {
                 params: {
                     api_key: apiKey,
                 },

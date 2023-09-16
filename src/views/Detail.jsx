@@ -2,18 +2,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Loader from '../components/Loader'
-import home from '../assets/sideBar/Home.svg'
-import Movie from '../assets/sideBar/Movie.svg'
-import Tv from '../assets/sideBar/Tv.svg'
-import star from '../assets/sideBar/Star.svg'
-import calender from '../assets/sideBar/Calendar.svg'
-import expand from '../assets/sideBar/ExpandArrow.svg'
-import logo from '../assets/sideBar/Logo2.svg'
-import logout from '../assets/sideBar/Logout.svg'
-import ticket from '../assets/sideBar/TwoTickets.svg'
-import listIcon from '../assets/sideBar/List.svg'
-import listIcon2 from '../assets/sideBar/List2.svg'
-import play from '../assets/sideBar/Play.svg'
+import home from '../assets/Home.png'
+import Movie from '../assets/movie.png'
+import Tv from '../assets/Tv.png'
+import star from '../assets/Star.png'
+import calender from '../assets/Calendar.png'
+import expand from '../assets/ExpandArrow.png'
+import logo from "../assets/Logo2.png"
+import logout from '../assets/Logout.png'
+import ticket from '../assets/ticket.png'
+import listIcon from '../assets/List.png'
+import listIcon2 from '../assets/List2.png'
+import play from '../assets/Play.png'
 import YouTube from "react-youtube";
 
 const Detail = () => {
@@ -58,7 +58,7 @@ const Detail = () => {
 
   const fetchMovieDetails = async () => {
     try {
-      const response = await axios.get(`${baseUrl}/discover/movie/${id}`, {
+      const response = await axios.get(`${baseUrl}/movie/${id}`, {
         params: {
           api_key: apiKey,
           append_to_response: 'videos'

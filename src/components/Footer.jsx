@@ -1,7 +1,7 @@
-import fb from '../assets/socialIcons/facebook.svg'
-import ig from '../assets/socialIcons/ig.svg'
-import twitter from '../assets/socialIcons/twitter.svg'
-import youtube from '../assets/socialIcons/youtube.svg'
+import fb from '../assets/socialIcons/fb.png'
+import ig from '../assets/socialIcons/ig.png'
+import twitter from '../assets/socialIcons/twitter.png'
+import youtube from '../assets/socialIcons/youtube.png'
 
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
       <section>
         <div className='flex  space-x-4 md:space-x-7 justify-center '>
           {icons.map((t, i) =>
-            <img key={i} src={t} className='h-[3] w-[5] max-h-[3]  text-sm object-cover'/>
+            <img key={i} src={t} className='h-[3] w-[5] max-h-[3]  text-sm object-cover' />
           )}
         </div>
 

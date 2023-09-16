@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import imdb from '../assets/imdb.svg'
-import tomatoes from '../assets/tomates.svg'
-import heart from '../assets/Heart.svg'
+import imdb from '../assets/imdb.png'
+import tomatoes from '../assets/tomato.png'
+import favIcon from '../assets/favIcon.png'
 import { Link } from 'react-router-dom'
 
 
@@ -29,7 +29,7 @@ const MovieCard = ({ movie }) => {
                             />
                         </a>
                         <span className='rounded-full flex justify-center items-center absolute top-3 right-3 bg-[#F3F4F6]/50 h-[29.21px] w-[30px]'>
-                            <img src={heart}
+                            <img src={favIcon}
                                 alt="imdb rating"
                                 className='  h-[19.47pxpx] w-[20px] hover:scale-110 transition-all duration-150 cursor-pointer' />
                         </span>
