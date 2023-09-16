@@ -17,7 +17,7 @@ const Home = () => {
     const [heroMovies, setHeroMovies] = useState([]);
     const [selectedMovieIndex, setSelectedMovieIndex] = useState(0);
 
-    const baseUrl = `https://api.themoviedb.org/3/`;
+    const baseUrl = `http://api.themoviedb.org/3/`;
 
     const fetchMovies = async () => {
         try {
