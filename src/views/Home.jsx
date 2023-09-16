@@ -7,6 +7,10 @@ import tomatoes from '../assets/tomato.png';
 import playT from '../assets/playTrailer.png';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
+import logo from '../assets/Logo.png'
+import search from '../assets/Search.png'
+import sign from '../assets/signin.png'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const apiKey = import.meta.env.VITE_API_KEY;
@@ -64,18 +68,39 @@ const Home = () => {
                         <>
                             {/* banner */}
                             <div className="heroBanner h-[600px] relative w-full">
+
+                                {/* naviation */}
+                                <div className="nav absolute flex items-center w-full justify-between px-2 mt-2 z-20">
+                                    <Link to="#" >
+                                        <img src={logo} alt="imdb rating" className="h-[40px]" />
+                                    </Link>
+
+                                    <div className="search items-center hidden md:flex border border-[gray/300]  rounded pl-2 pr-4 md:w-[500px]">
+                                        <input type="text" name="" id=""
+                                            className="bg-transparent bg-none outline-none pr-5 py-2 placeholder:text-white
+                                            placeholder:font-light w-full"
+                                            placeholder='What do you want to watch?'
+                                        />
+                                        <img src={search} alt="imdb rating"
+                                            className="h-[15px] w-[15px]" />
+                                    </div>
+
+                                    <div className="wrap flex items-center cursor-pointer">
+                                        <span className=' text-white font-bold mr-1' >Sign in </span>
+                                        <img src={sign} alt="imdb rating" className="h-[35px] w-[35px]" />
+                                    </div>
+                                </div>
+
                                 {heroMovies?.map((t, i) => (
                                     <div
                                         key={i}
-                                        className={`wrap overflow-hidden ${i === selectedMovieIndex ? 'active h-full  bg-no-repeat  bg-cover bg-local bg-top ' : 'hidden'
+                                        className={`wrap overflow-hidden ${i === selectedMovieIndex ? 'active h-full bg-no-repeat bg-cover bg-local bg-top ' : 'hidden'
                                             }`}
                                         style={{
                                             backgroundImage: `url(${img_url}${t?.backdrop_path})`,
                                         }}
                                     >
                                         {/* Navigation Dots */}
-
-
 
                                         <div className="Container relative flex justify-between items-center  h-full w-full  px-3 md:px-10">
 
@@ -95,7 +120,6 @@ const Home = () => {
                                                         <span>
                                                             {t?.vote_average}{' '}
                                                             <b className="text-[15px] ">
-                                                                |{' '}
                                                                 {t?.vote_count >= 1000
                                                                     ? (t.vote_count / 1000).toFixed()
                                                                     : t.vote_count.toString()}

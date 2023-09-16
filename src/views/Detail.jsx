@@ -61,7 +61,8 @@ const Detail = () => {
       const response = await axios.get(`${baseUrl}/movie/${id}`, {
         params: {
           api_key: apiKey,
-          append_to_response: 'videos'
+          append_to_response: 'videos',
+          append_to_response: 'credits',
         },
       });
       setMovie(response.data);
