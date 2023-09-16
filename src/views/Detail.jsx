@@ -25,6 +25,8 @@ const Detail = () => {
   const [slideMovies, setSlideMovies] = useState(null);
 
   const { id } = useParams();
+
+
   const apiKey = import.meta.env.VITE_API_KEY;
   const baseUrl = 'https://api.themoviedb.org/3';
 
