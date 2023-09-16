@@ -19,14 +19,14 @@ import YouTube from "react-youtube";
 const Detail = () => {
   const [playButton, setPlayButton] = useState(false)
 
-  const img_url = "http://image.tmdb.org/t/p/original";
+  const img_url = "https://image.tmdb.org/t/p/original";
 
   const [movie, setMovie] = useState(null);
   const [slideMovies, setSlideMovies] = useState(null);
 
   const { id } = useParams();
   const apiKey = import.meta.env.VITE_API_KEY;
-  const baseUrl = 'http://api.themoviedb.org/3';
+  const baseUrl = 'https://api.themoviedb.org/3';
 
 
   const icons = {

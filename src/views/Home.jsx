@@ -10,14 +10,14 @@ import Loader from '../components/Loader';
 
 const Home = () => {
     const apiKey = import.meta.env.VITE_API_KEY;
-    const img_url = 'http://image.tmdb.org/t/p/original';
+    const img_url = 'https://image.tmdb.org/t/p/original';
 
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [heroMovies, setHeroMovies] = useState([]);
     const [selectedMovieIndex, setSelectedMovieIndex] = useState(0);
 
-    const baseUrl = `http://api.themoviedb.org/3/`;
+    const baseUrl = `https://api.themoviedb.org/3`;
 
     const fetchMovies = async () => {
         try {
