@@ -19,7 +19,7 @@ const MovieCard = ({ movie }) => {
                 <div className="card overflow-hidden [data-testid: movie-card] " data-testid="movie-card" >
 
                     <div className="imgWrapper overflow-hidden max-h-[300px] relative">
-                        <a href={`/details/${movie.id}/`}>
+                        <Link to={`/details/${movie?.id}`}>
                             <img
                                 // eslint-disable-next-line react/prop-types
                                 data-testid="movie-poster"
@@ -27,7 +27,7 @@ const MovieCard = ({ movie }) => {
                                 className=' relative mb-2 cursor-pointer hover:scale-110 transition-all duration-150 '
                                 alt="movie poster"
                             />
-                        </a>
+                        </Link>
                         <span className='rounded-full flex justify-center items-center absolute top-3 right-3 bg-[#F3F4F6]/50 h-[29.21px] w-[30px]'>
                             <img src={favIcon}
                                 alt="imdb rating"
